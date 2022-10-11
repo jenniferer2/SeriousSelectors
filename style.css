@@ -31,7 +31,7 @@ shifts to the center of the page and the font becomes smaller.*/
 You'll see that the text "by Insert Name" becomes 
 centered, grey, and smaller. */
 
-p{
+h2 + p {
   text-align: center;
   color: grey;
   font-size: 10px;
@@ -43,7 +43,7 @@ bonus points if you can find a way to do this
 differently from number 4. This will center and underline 
 the text underneath the board(the area currently 
 filled with red images). */
-#after{
+div + p {
   text-align: center;
   text-decoration: underline;
 }
@@ -53,7 +53,7 @@ that is a div. When this selector is correct,
 the two red chunks will disappear and you'll be able to see
 all of the red board pieces. */
 
-img{
+div > img {
   width: 95%;
   height: 95%;
   margin: auto;
@@ -70,7 +70,7 @@ The correct selector will result in the outline
 of all of the cells of the board correctly displaying. 
 The board should be centered. */
 
-.cell{
+div > .cell{
   display: block;
   height: 50px;
   width: 50px;
@@ -85,7 +85,7 @@ The board should be centered. */
 inside of another div inside of another div. 
 This will result in the blue pieces appearing. */
 
-div{
+div div div{
   display: block;
   height: 95%;
   width: 95%;
@@ -106,7 +106,7 @@ odd number element with a particular class,
 then use what you used in the above two selectors 
 to specify what the parent must be.*/
 
-selector_9{
+ #board > .cell:nth-child(odd){
   background-color: black;
 }
 
@@ -124,7 +124,7 @@ of a div inside of a div when you hover over it.
 Finally, figure out how to select two types of things
 at the same time.* */
 
-selector_10{
+div div div:hover, img:hover {
   border: solid yellow thin;
 }
 
